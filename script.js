@@ -1,9 +1,12 @@
 //your JS code here. If required.
 
-let counter =document.getElementById("counter");
-let btn =document.getElementById("incrementBtn");
 
-btn.onclick=()=>{
-	alert(counter.innerText);
-	counter.innerText++;
-}
+const counterElement = document.getElementById('counter');
+  const incrementButton = document.getElementById('incrementBtn');
+
+  incrementButton.addEventListener('click', () => {
+    let counterValue = parseInt(counterElement.textContent);
+    alert("Current counter value: " + counterValue);
+    counterValue++;
+    counterElement.textContent = counterValue;
+  });
